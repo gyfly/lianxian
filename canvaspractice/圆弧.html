@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="800" height="800"></canvas>
+</body>
+<script>
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+    // ctx.beginPath();
+    // ctx.arc(200, 200, 100, 0, 1.5 * Math.PI, false); //false为顺时针
+    // ctx.stroke();
+
+
+    for (var i = 60; i <= 600; i += 6) {
+        ctx.beginPath();
+        ctx.arc(i, i, i, 0, 2 * Math.PI, false);
+        console.log(i);
+        ctx.stroke();
+        ctx.closePath();
+    }
+</script>
+
+</html>
